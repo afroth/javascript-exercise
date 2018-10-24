@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<p>Click the button to append an item to the end of the list.</p>
+<textarea id= "tx" width="50" height = "3"></textarea>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+var items = [];
+var counter = items.length;
+function myFunction() {
+	var fruit = document.createElement("p");
+      var tx = document.getElementById("tx").value;
+      var textnode = document.createTextNode(tx);
+      fruit.appendChild(textnode);
+	 
+	 items[counter]= tx;
+    items.toString();
+    document.getElementById("demo").innerHTML = items;
+	counter = counter +1;
+}
+</script>
+
+</body>
+</html>
